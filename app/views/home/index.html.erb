@@ -1,0 +1,40 @@
+<p>
+We charge a flat rate of $10 per month, plus the following fees for a checking account:<br />
+$0.15 each for less than 30 checks <br />
+$0.10 each for 31 through 50 checks<br />
+$0.07 each for 51 through 75 checks<br />
+$0.05 each for more than 75 checks<br /> 
+We assume that all checks for the month are assigned the same charge, based on the total number of checks written during the month. 
+</p>
+
+<script type="text/javascript">
+	function check_fee() {
+		if (document.fee_calc.check.value <= 30) {
+		document.fee_calc.surcharge.value = (.15);
+		document.fee_calc.total_charge.value = ((document.fee_calc.check.value -0) * document.fee_calc.surcharge.value) + 10;
+		} else if (document.fee_calc.check.value > 30 && document.fee_calc.check.value <= 50) {
+		document.fee_calc.surcharge.value = (.10);
+		document.fee_calc.total_charge.value = ((document.fee_calc.check.value -0) * document.fee_calc.surcharge.value) + 10;
+		} else if (document.fee_calc.check.value > 50 && document.fee_calc.check.value <= 75) {
+		document.fee_calc.surcharge.value = (.07);
+		document.fee_calc.total_charge.value = ((document.fee_calc.check.value -0) * document.fee_calc.surcharge.value) + 10;
+		} else if (document.fee_calc.check.value > 75) {
+		document.fee_calc.surcharge.value = (.05);
+		document.fee_calc.total_charge.value = ((document.fee_calc.check.value -0) * document.fee_calc.surcharge.value) + 10;
+		}
+	}
+</script>
+
+<div id="Calculator">
+	<form name="fee_calc" >
+		Flat Rate Charge Per Month:
+		<input value="10" readonly style="border:0px;" /><br />
+		Amount of Checks You Cash Per Month:
+		<input name="check" maxlength="3" size="2" /><br />
+		Cash Fee Per Check:
+		<input name="surcharge" readonly style="border:0px;" /><br />
+		Total Charges per Month:
+		<input name="total_charge" readonly style="border:0px;" /><br />
+	</form>
+	<button onClick="check_fee()">Calculate</button>
+</div>

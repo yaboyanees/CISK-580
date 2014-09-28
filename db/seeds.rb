@@ -1,0 +1,23 @@
+Book.create(:isbn =>"1234567890", :title=>"The Road Less Traveled", :author =>"Robert Frost", :publisher =>"RCS Libri", :shelf_location =>"A.12", :subject_id =>"1")
+Book.create(:isbn =>"2234567891", :title=>"Tick Tock Goes The Clock", :author =>"Stephen King", :publisher =>"HarperCollins", :shelf_location =>"G.33", :subject_id =>"2")
+Book.create(:isbn =>"3234567892", :title=>"Dinner with The Devil", :author =>"Granson Scott", :publisher =>"Rodger Doger", :shelf_location =>"C.09", :subject_id =>"3")
+Book.create(:isbn =>"4234567893", :title=>"Love at First Sight", :author =>"Mary Kay", :publisher =>"Houghton Mifflin", :shelf_location =>"A.46", :subject_id =>"4")
+Book.create(:isbn =>"5234567894", :title=>"The Blacklist", :author =>"Ryan Ranter", :publisher =>"Carlona Publishing", :shelf_location =>"F.12", :subject_id =>"5")
+
+Book.create(:isbn =>"6234567895", :title=>"Art & Beauty of Istanbul", :author =>"Mehmet Walid", :publisher =>"Kirkland Stay", :shelf_location =>"B.11", :subject_id =>"6")
+Book.create(:isbn =>"7234567896", :title=>"The Life of Benjamin Franklin", :author =>"Benjamin Franklin", :publisher =>"CC Ny Inc.", :shelf_location =>"C.55", :subject_id =>"7")
+Book.create(:isbn =>"8234567897", :title=>"The Lean Business Model Canvass", :author =>"Roy Stephens", :publisher =>"Random House", :shelf_location =>"D.03", :subject_id =>"8")
+Book.create(:isbn =>"9234567898", :title=>"Agile Mehtods in Ruby on Rails", :author =>"Ryan Bates", :publisher =>"RHR Publishing", :shelf_location =>"E.34", :subject_id =>"9")
+Book.create(:isbn =>"0234567899", :title=>"Best Practices Ruby on Rails 4.0", :author =>"Albert McKinnley", :publisher =>"Pearson", :shelf_location =>"G.12", :subject_id =>"10")
+
+Subject.create(:subject_code =>"F1", :subject_name =>"Poetry", :fiction =>"t")
+Subject.create(:subject_code =>"F2", :subject_name =>"Drama", :fiction =>"t")
+Subject.create(:subject_code =>"F3", :subject_name =>"Mystery", :fiction =>"t")
+Subject.create(:subject_code =>"F4", :subject_name =>"Romance", :fiction =>"t")
+Subject.create(:subject_code =>"F5", :subject_name =>"Thrillers", :fiction =>"t")
+
+Subject.create(:subject_code =>"N1", :subject_name =>"Art", :fiction =>"f")
+Subject.create(:subject_code =>"N2", :subject_name =>"Biograpghy", :fiction =>"f")
+Subject.create(:subject_code =>"N3", :subject_name =>"Business", :fiction =>"f")
+Subject.create(:subject_code =>"N4", :subject_name =>"Computers", :fiction =>"f")
+Subject.create(:subject_code =>"N5", :subject_name =>"Education", :fiction =>"f")

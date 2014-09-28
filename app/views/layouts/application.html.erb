@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Programming</title>
+  <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
+  <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+	<div id="navi">
+		<ul class="links">
+			<a><%= link_to 'Assignment #1', root_path %></a>
+			<a>|</a>
+			<a><%= link_to 'Assignment #2', books_path %></a>
+			<a>|</a>
+			<a><%= link_to 'Books Listing', books_path %></a>
+			<a>|</a>
+			<a><%= link_to 'Subject Listing', subjects_path %></a>
+		</ul>
+	</div>
+		<%= yield %>
+</body>
+</html>

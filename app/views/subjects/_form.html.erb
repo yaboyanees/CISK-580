@@ -1,0 +1,31 @@
+<div id="books">
+<%= form_for(@subject) do |f| %>
+  <% if @subject.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@subject.errors.count, "error") %> prohibited this subject from being saved:</h2>
+
+      <ul>
+      <% @subject.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :subject_code %><br>
+    <%= f.text_field :subject_code, :placeholder =>"e.g. N9" %>
+  </div>
+  <div class="field">
+    <%= f.label :subject_name %><br>
+    <%= f.text_field :subject_name, :placeholder =>"e.g. Children" %>
+  </div>
+  <div class="field">
+    <%= f.label :fiction %><br>
+    <%= f.check_box :fiction %>
+  </div>
+  <div class="actions">
+    <%= f.submit %> or <%= link_to 'Cancel', subjects_path %>
+  </div>
+<% end %>
+</div>
